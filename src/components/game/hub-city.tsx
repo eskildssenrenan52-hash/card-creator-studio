@@ -9,7 +9,7 @@ import { useGate } from "@/components/game/gate";
  * partículas, parallax em 3 camadas e câmera suave.
  * ------------------------------------------------------------------------- */
 
-const WORLD_W = 3100;
+const WORLD_W = 3600;
 const GROUND_Y = 620; // y do chão em coordenadas de mundo
 const SKY_TOP = -260; // topo do mundo
 
@@ -56,6 +56,7 @@ const BUILDINGS: Building[] = [
   { id: "ranked", label: "TORRE RANQUEADA", art: "/city/b_ranked.png", x: 1830, w: 260, h: 429 },
   { id: "tournaments", label: "COLISEU", art: "/city/b_tourney.png", x: 2320, w: 360, h: 360 },
   { id: "engineer", label: "OFICINA DO ENGENHEIRO", art: "/city/b_engineer.png", x: 2820, w: 300, h: 372 },
+  { id: "cards", label: "SALA DE SUPORTE", art: "/city/b_cards.png", x: 3260, w: 300, h: 360 },
 ];
 
 type Platform = { x: number; y: number; w: number; range?: number; speed?: number };
