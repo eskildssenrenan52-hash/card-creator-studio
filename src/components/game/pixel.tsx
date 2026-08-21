@@ -360,13 +360,14 @@ export function SheetSprite({
         if (next >= frames) {
           if (loop) return 0;
           window.clearInterval(id);
-          doneRef.current?.();
+          window.setTimeout(() => doneRef.current?.(), 0);
           return prev;
         }
         return next;
       });
     }, 1000 / fps);
     return () => window.clearInterval(id);
+
   }, [url, cols, rows, frames, fps, loop]);
 
   const cx = i % cols;
